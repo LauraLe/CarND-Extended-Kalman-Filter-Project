@@ -3,6 +3,12 @@
 #include "Eigen/Dense"
 
 class KalmanFilter {
+private:
+    
+    /**
+     * Update P with matrix Y, common function for KF and EKF
+     */
+    void UpdatePWithY(const Eigen::VectorXd &y);
 public:
 
   // state vector
